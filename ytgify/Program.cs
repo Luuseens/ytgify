@@ -15,10 +15,11 @@ namespace ytgify
     {
         static void Main(string[] args)
         {
-            var link = "https://www.youtube.com/watch?v=2a4gyJsY0mc";
-            IEnumerable<VideoInfo> videoInfos = DownloadUrlResolver.GetDownloadUrls(link);
+            //var link = "https://www.youtube.com/watch?v=2a4gyJsY0mc";
+            var link = "https://www.youtube.com/watch?v=FaOSCASqLsE";
+            var videoInfos = DownloadUrlResolver.GetDownloadUrls(link);
 
-            VideoInfo video = videoInfos.First(info => info.VideoType == VideoType.Mp4);
+            var video = videoInfos.First(info => info.VideoType == VideoType.Mp4);
 
             if (video.RequiresDecryption)
             {
@@ -27,7 +28,7 @@ namespace ytgify
 
             var fname = video.Title;
             var badChars = Path.GetInvalidFileNameChars().Where(c => fname.Contains(c));
-            
+
             foreach (var badChar in badChars)
             {
                 fname = fname.Replace(badChar, '_');
@@ -36,15 +37,23 @@ namespace ytgify
             var videoDownloader = new VideoDownloader(video, Path.Combine(Environment.CurrentDirectory, fname + video.VideoExtension));
 
             videoDownloader.Execute();
-            
-            
 
             var reader = new VideoFileReader();
             reader.Open(Path.Combine(Environment.CurrentDirectory, fname + video.VideoExtension));
 
-            for (int i = 0; i < 1500; i++)
+            var framesToSkip = 110 * 23.98; //reader.FrameRate;
+            for (int i = 0; i < framesToSkip; i++)
             {
-                Bitmap videoFrame = reader.ReadVideoFrame();
+                var fr = reader.ReadVideoFrame();
+                fr.Dispose();
+                
+            }
+
+            var framesToTake = 7 * 23.98;
+
+            for (int i = 0; i < framesToTake; i++)
+            {
+                var videoFrame = reader.ReadVideoFrame();
                 videoFrame.Save(Path.Combine(Environment.CurrentDirectory, "screenie" + i + ".png"));
                 // process the frame somehow
                 // ...
@@ -52,10 +61,8 @@ namespace ytgify
                 // dispose the frame when it is no longer required
                 videoFrame.Dispose();
             }
-
-            reader.Close();
             
-
+            reader.Close();
         }
     }
 }
