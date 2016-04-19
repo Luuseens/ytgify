@@ -9,6 +9,8 @@ namespace ytgify
 
     using AForge.Video.FFMPEG;
 
+    using NGif;
+
     using YoutubeExtractor;
 
     class Program
@@ -19,6 +21,7 @@ namespace ytgify
             var link = "https://www.youtube.com/watch?v=FaOSCASqLsE";
             var videoInfos = DownloadUrlResolver.GetDownloadUrls(link);
 
+            videoInfos = videoInfos.Where(v => v.Resolution > 200).OrderBy(v => v.Resolution);
             var video = videoInfos.First(info => info.VideoType == VideoType.Mp4);
 
             if (video.RequiresDecryption)
@@ -51,10 +54,18 @@ namespace ytgify
 
             var framesToTake = 7 * 23.98;
 
+            var outputFilePath = Path.Combine(Environment.CurrentDirectory, "screen.gif");
+            var e = new AnimatedGifEncoder();
+            e.Start(outputFilePath);
+            e.SetDelay(1000 / 24);
+            e.SetRepeat(0);
+
+
             for (int i = 0; i < framesToTake; i++)
             {
                 var videoFrame = reader.ReadVideoFrame();
-                videoFrame.Save(Path.Combine(Environment.CurrentDirectory, "screenie" + i + ".png"));
+                e.AddFrame(videoFrame);
+                // videoFrame.Save(Path.Combine(Environment.CurrentDirectory, "screenie" + i + ".png"));
                 // process the frame somehow
                 // ...
 
@@ -63,6 +74,13 @@ namespace ytgify
             }
             
             reader.Close();
+ 
+            for (int i = 0; i < framesToTake; i++)
+            {
+                //e.AddFrame(Image.FromFile(Path.Combine(Environment.CurrentDirectory, "screenie" + i + ".png")));
+            }
+            e.Finish();
+
         }
     }
 }

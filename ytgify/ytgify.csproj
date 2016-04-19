@@ -42,6 +42,12 @@
     <Reference Include="Accord.Video.FFMPEG">
       <HintPath>..\packages\Accord.Video.FFMPEG.3.0.2\lib\net45\Accord.Video.FFMPEG.dll</HintPath>
     </Reference>
+    <Reference Include="Gif.Components">
+      <HintPath>..\externalLibs\Gif.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="NGif">
+      <HintPath>..\externalLibs\NGif.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
