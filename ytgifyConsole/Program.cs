@@ -38,7 +38,7 @@ namespace ytgify
             }
 
             var videoDownloader = new VideoDownloader(video, Path.Combine(Environment.CurrentDirectory, fname + video.VideoExtension));
-
+                
             videoDownloader.Execute();
 
             var reader = new VideoFileReader();
