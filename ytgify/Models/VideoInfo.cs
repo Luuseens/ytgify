@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="VideoInfo.cs" author="Randy Smukulis">
+//   Copyright Randy Smukulis.
+// </copyright>
+// <author>Randy Smukulis</author>
+// --------------------------------------------------------------------------------------------------------------------
+    
 namespace ytgify.Models
 {
     public class VideoInfo

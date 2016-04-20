@@ -1,11 +1,15 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Program.cs" author="Randy Smukulis">
+//   Copyright Randy Smukulis.
+// </copyright>
+// <author>Randy Smukulis</author>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace ytgify
 {
     using System;
-    using System.Drawing;
     using System.IO;
+    using System.Linq;
 
     using AForge.Video.FFMPEG;
 
@@ -13,11 +17,11 @@ namespace ytgify
 
     using YoutubeExtractor;
 
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            //var link = "https://www.youtube.com/watch?v=2a4gyJsY0mc";
+            ////var link = "https://www.youtube.com/watch?v=2a4gyJsY0mc";
             var link = "https://www.youtube.com/watch?v=FaOSCASqLsE";
             var videoInfos = DownloadUrlResolver.GetDownloadUrls(link);
 
@@ -44,12 +48,11 @@ namespace ytgify
             var reader = new VideoFileReader();
             reader.Open(Path.Combine(Environment.CurrentDirectory, fname + video.VideoExtension));
 
-            var framesToSkip = 110 * 23.98; //reader.FrameRate;
+            var framesToSkip = 110 * 23.98; // reader.FrameRate;
             for (int i = 0; i < framesToSkip; i++)
             {
                 var fr = reader.ReadVideoFrame();
                 fr.Dispose();
-                
             }
 
             var framesToTake = 7 * 23.98;
@@ -60,16 +63,10 @@ namespace ytgify
             e.SetDelay(1000 / 24);
             e.SetRepeat(0);
 
-
             for (int i = 0; i < framesToTake; i++)
             {
                 var videoFrame = reader.ReadVideoFrame();
                 e.AddFrame(videoFrame);
-                // videoFrame.Save(Path.Combine(Environment.CurrentDirectory, "screenie" + i + ".png"));
-                // process the frame somehow
-                // ...
-
-                // dispose the frame when it is no longer required
                 videoFrame.Dispose();
             }
             
@@ -77,10 +74,10 @@ namespace ytgify
  
             for (int i = 0; i < framesToTake; i++)
             {
-                //e.AddFrame(Image.FromFile(Path.Combine(Environment.CurrentDirectory, "screenie" + i + ".png")));
+                ////e.AddFrame(Image.FromFile(Path.Combine(Environment.CurrentDirectory, "screenie" + i + ".png")));
             }
-            e.Finish();
 
+            e.Finish();
         }
     }
 }

@@ -1,4 +1,11 @@
-﻿namespace ytgify.Models
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="GifyRequest.cs" author="Randy Smukulis">
+//   Copyright Randy Smukulis.
+// </copyright>
+// <author>Randy Smukulis</author>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace ytgify.Models
 {
     using System;
 
