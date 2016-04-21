@@ -17,15 +17,22 @@ namespace ytgify
 
     using YoutubeExtractor;
 
+    /// <summary>
+    /// Entry class for the console app.
+    /// </summary>
     public class Program
     {
+        /// <summary>
+        /// Entry method for the console app.
+        /// </summary>
+        /// <param name="args">The arguments.</param>
         public static void Main(string[] args)
         {
             ////var link = "https://www.youtube.com/watch?v=2a4gyJsY0mc";
             var link = "https://www.youtube.com/watch?v=FaOSCASqLsE";
             var videoInfos = DownloadUrlResolver.GetDownloadUrls(link);
 
-            videoInfos = videoInfos.Where(v => v.Resolution > 200).OrderBy(v => v.Resolution);
+            videoInfos = videoInfos.Where(v => v.Resolution > 300).OrderBy(v => v.Resolution);
             var video = videoInfos.First(info => info.VideoType == VideoType.Mp4);
 
             if (video.RequiresDecryption)

@@ -13,7 +13,7 @@ namespace ytgify.Interfaces
 
     /// <summary>
     /// Interface for a video downloader that can get video information 
-    /// (e.g. available encodings)for the video, and then download the video file.  
+    /// (e.g. available encodings) for the video, and then download the video file.  
     /// </summary>
     public interface IYoutubeDownloader
     {

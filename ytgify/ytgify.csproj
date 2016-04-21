@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IVideoToGifConverter.cs" />
     <Compile Include="Interfaces\IYoutubeDownloader.cs" />
     <Compile Include="Models\GifyRequest.cs" />
     <Compile Include="Models\VideoInfo.cs" />

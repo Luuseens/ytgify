@@ -1,4 +1,11 @@
-﻿using System.Reflection;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="AssemblyInfo.cs" author="Randy Smukulis">
+//   Copyright Randy Smukulis.
+// </copyright>
+// <author>Randy Smukulis</author>
+// --------------------------------------------------------------------------------------------------------------------
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
