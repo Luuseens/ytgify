@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ytgifyConsole", "ytgifyCons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ytgify", "ytgify\ytgify.csproj", "{D771EFD5-B934-4F13-8772-0E01748BA91D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFMpegGifConverter", "FFMpegGifConverter\FFMpegGifConverter.csproj", "{9AE74479-160B-4A1E-99A8-2E6BCC9877B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D771EFD5-B934-4F13-8772-0E01748BA91D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D771EFD5-B934-4F13-8772-0E01748BA91D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D771EFD5-B934-4F13-8772-0E01748BA91D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AE74479-160B-4A1E-99A8-2E6BCC9877B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE74479-160B-4A1E-99A8-2E6BCC9877B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE74479-160B-4A1E-99A8-2E6BCC9877B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE74479-160B-4A1E-99A8-2E6BCC9877B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
