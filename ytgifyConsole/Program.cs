@@ -5,7 +5,7 @@
 // <author>Randy Smukulis</author>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace ytgify
+namespace ytgifyConsole
 {
     using System;
     using System.IO;
@@ -13,9 +13,13 @@ namespace ytgify
 
     using AForge.Video.FFMPEG;
 
+    using FFMpegGifConverter;
+
     using NGif;
 
     using YoutubeExtractor;
+
+    using ytgify.Models;
 
     /// <summary>
     /// Entry class for the console app.
@@ -28,6 +32,17 @@ namespace ytgify
         /// <param name="args">The arguments.</param>
         public static void Main(string[] args)
         {
+            var adapt = new FFMpegVideoToGifAdapter();
+
+            adapt.Convert(
+                @"C:\dev\git\ytgify\ytgifyConsole\bin\Debug\Star Wars Undercover Boss_ Starkiller Base - SNL.mp4",
+                Guid.NewGuid() + ".gif",
+                new GifyRequest
+                {
+                    StartTime = new TimeSpan(0, 1, 50),
+                    CaptureLengthTime = new TimeSpan(0, 0, 8),
+                });
+
             ////var link = "https://www.youtube.com/watch?v=2a4gyJsY0mc";
             var link = "https://www.youtube.com/watch?v=FaOSCASqLsE";
             var videoInfos = DownloadUrlResolver.GetDownloadUrls(link);
