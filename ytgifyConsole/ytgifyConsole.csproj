@@ -92,7 +92,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FFMpegGifConverter\ytgify.Adapters.FFMpegGifConverter.csproj">
+    <ProjectReference Include="..\ytgify.Adapters.FFMpegGifConverter\ytgify.Adapters.FFMpegGifConverter.csproj">
       <Project>{9AE74479-160B-4A1E-99A8-2E6BCC9877B2}</Project>
       <Name>ytgify.Adapters.FFMpegGifConverter</Name>
     </ProjectReference>

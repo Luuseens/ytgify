@@ -7,6 +7,7 @@
 
 namespace ytgify.Interfaces
 {
+    using System;
     using System.Collections.Generic;
 
     using ytgify.Models;
@@ -20,8 +21,9 @@ namespace ytgify.Interfaces
         /// <summary>
         /// Gets the video information (title, encodings, resolutions).
         /// </summary>
+        /// <param name="videoUrl">Source video to retrieve information of.</param>
         /// <returns>An enumeration of video information objects.</returns>
-        IEnumerable<VideoInfo> GetVideoInfos();
+        IEnumerable<VideoInfo> GetVideoInfos(Uri videoUrl);
 
         /// <summary>
         /// Downloads the specified video.

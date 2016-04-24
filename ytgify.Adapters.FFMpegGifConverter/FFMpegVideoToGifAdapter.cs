@@ -32,7 +32,7 @@ namespace ytgify.Adapters.FFMpegGifConverter
                 requestSettings.StartTime,
                 requestSettings.CaptureLengthTime,
                 outputGifPath);
-            
+
             var process = new Process();
             process.StartInfo.FileName = "ffmpeg.exe";
             process.StartInfo.Arguments = strCmdText;

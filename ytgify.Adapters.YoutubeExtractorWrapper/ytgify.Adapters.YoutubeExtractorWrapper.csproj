@@ -7,8 +7,8 @@
     <ProjectGuid>{EB54D955-4531-44DF-9B12-BC9D8833D7E0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ytgify.Adapters.YoutubeExtractor</RootNamespace>
-    <AssemblyName>ytgify.Adapters.YoutubeExtractor</AssemblyName>
+    <RootNamespace>ytgify.Adapters.YoutubeExtractorWrapper</RootNamespace>
+    <AssemblyName>ytgify.Adapters.YoutubeExtractorWrapper</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>5ef3af4f</NuGetPackageImportStamp>
@@ -38,8 +38,12 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="YoutubeExtractor">
+      <HintPath>..\externalLibs\YoutubeExtractor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VideoInfoConverter.cs" />
     <Compile Include="YoutubeExtractorAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

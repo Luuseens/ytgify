@@ -12,11 +12,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ytgify.Adapters.YoutubeExtractor")]
+[assembly: AssemblyTitle("ytgify.Adapters.YoutubeExtractorWrapper")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ytgify.Adapters.YoutubeExtractor")]
+[assembly: AssemblyProduct("ytgify.Adapters.YoutubeExtractorWrapper")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

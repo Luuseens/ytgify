@@ -33,5 +33,10 @@ namespace ytgify.Models
         /// Gets or sets the horizontal resolution in pixels, e.g. 240.
         /// </summary>
         public int? Resolution { get; set; }
+
+        /// <summary>
+        /// Gets or sets the URI to allow downloading this specific video endcoding.
+        /// </summary>
+        public Uri EncodedVideoUri { get; set; }
     }
 }
