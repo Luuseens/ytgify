@@ -96,6 +96,10 @@
       <Project>{9AE74479-160B-4A1E-99A8-2E6BCC9877B2}</Project>
       <Name>ytgify.Adapters.FFMpegGifConverter</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ytgify.Adapters.YoutubeExtractorWrapper\ytgify.Adapters.YoutubeExtractorWrapper.csproj">
+      <Project>{eb54d955-4531-44df-9b12-bc9d8833d7e0}</Project>
+      <Name>ytgify.Adapters.YoutubeExtractorWrapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ytgify\ytgify.csproj">
       <Project>{d771efd5-b934-4f13-8772-0e01748ba91d}</Project>
       <Name>ytgify</Name>

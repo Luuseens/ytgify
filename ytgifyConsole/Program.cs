@@ -31,6 +31,10 @@ namespace ytgifyConsole
         /// <param name="args">The arguments.</param>
         public static void Main(string[] args)
         {
+            var downloader = new ytgify.Adapters.YoutubeExtractorWrapper.YoutubeExtractorAdapter();
+            var info2 = downloader.GetVideoInfos(new Uri("https://www.youtube.com/watch?v=FaOSCASqLsE"));
+            downloader.Download(info2.First(), "vidya.mp4");
+
             var adapt = new FFMpegVideoToGifAdapter();
 
             adapt.Convert(

@@ -10,7 +10,9 @@ namespace ytgify.Adapters.YoutubeExtractorWrapper
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    
+    using System.Net;
+    using System.Net.Http;
+
     using YoutubeExtractor;
 
     using ytgify.Interfaces;
@@ -49,7 +51,8 @@ namespace ytgify.Adapters.YoutubeExtractorWrapper
         /// <param name="savePath">The path to save the file to.</param>
         public void Download(ytgify.Models.VideoInfo videoInfo, string savePath)
         {
-            throw new System.NotImplementedException();
+            var client = new WebClient();
+            client.DownloadFile(videoInfo.EncodedVideoUri, savePath);
         }
     }
 }
