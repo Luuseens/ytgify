@@ -13,12 +13,11 @@ namespace ytgifyConsole
 
     using AForge.Video.FFMPEG;
 
-    using FFMpegGifConverter;
-
     using NGif;
 
     using YoutubeExtractor;
 
+    using ytgify.Adapters.FFMpegGifConverter;
     using ytgify.Models;
 
     /// <summary>

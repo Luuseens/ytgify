@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ytgifyConsole", "ytgifyCons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ytgify", "ytgify\ytgify.csproj", "{D771EFD5-B934-4F13-8772-0E01748BA91D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFMpegGifConverter", "FFMpegGifConverter\FFMpegGifConverter.csproj", "{9AE74479-160B-4A1E-99A8-2E6BCC9877B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ytgify.Adapters.FFMpegGifConverter", "FFMpegGifConverter\ytgify.Adapters.FFMpegGifConverter.csproj", "{9AE74479-160B-4A1E-99A8-2E6BCC9877B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ytgify.Adapters.YoutubeExtractor", "ytgify.Adapters.YoutubeExtractor\ytgify.Adapters.YoutubeExtractor.csproj", "{EB54D955-4531-44DF-9B12-BC9D8833D7E0}"
 EndProject

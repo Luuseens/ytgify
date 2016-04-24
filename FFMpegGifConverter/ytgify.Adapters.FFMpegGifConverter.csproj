@@ -7,8 +7,8 @@
     <ProjectGuid>{9AE74479-160B-4A1E-99A8-2E6BCC9877B2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FFMpegGifConverter</RootNamespace>
-    <AssemblyName>FFMpegGifConverter</AssemblyName>
+    <RootNamespace>ytgify.Adapters.FFMpegGifConverter</RootNamespace>
+    <AssemblyName>ytgify.Adapters.FFMpegGifConverter</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>c030c2e6</NuGetPackageImportStamp>

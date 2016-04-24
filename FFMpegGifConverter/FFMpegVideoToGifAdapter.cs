@@ -5,7 +5,7 @@
 // <author>Randy Smukulis</author>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace FFMpegGifConverter
+namespace ytgify.Adapters.FFMpegGifConverter
 {
     using System.Diagnostics;
 
